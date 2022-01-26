@@ -50,12 +50,12 @@ export class UsersController {
   //   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return 'Remove' + id;
+  remove(@Param('id') id: string): Promise<void> {
+    return this.usersService.remove(id);
   }
 
   @Put(':id')
-  update(@Body() updateUsersDto: UpdateUsersDto) {
-    return `updata + ${JSON.stringify(updateUsersDto)}`;
+  update(@Param('id') id: string, @Body() updateUsersDto: UpdateUsersDto) {
+    return this.usersService.update(id, updateUsersDto);
   }
 }
