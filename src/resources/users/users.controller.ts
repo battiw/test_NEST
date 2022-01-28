@@ -8,8 +8,8 @@ import {
   Put,
   ParseUUIDPipe,
 } from '@nestjs/common';
-import { CreateUsersDto } from './dto/users-create.dto';
-import { UpdateUsersDto } from './dto/users-update.dto';
+import { CreateUsersDto } from '../users/dto/usersCreate.dto';
+import { UpdateUsersDto } from '../users/dto/usersUpdate.dto';
 import { UsersService } from './users.service';
 import * as uuid from 'uuid';
 import { User } from './user.entity';
