@@ -1,10 +1,4 @@
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  Generated,
-  OneToMany,
-} from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { v4 as uuid } from 'uuid';
 import { Tasks } from '../tasks/tasks.entity';
 // import { Columns } from './column.entity';

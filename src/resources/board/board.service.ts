@@ -1,12 +1,9 @@
-import { Injectable, ParseUUIDPipe } from '@nestjs/common';
-import { randomUUID } from 'crypto';
+import { Injectable } from '@nestjs/common';
 import { CreateBoardDto } from './dto/board-create.dto';
-import { v4 as uuid } from 'uuid';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Board } from './board.entity';
 import { Repository } from 'typeorm';
 import { UpdateBoardDto } from './dto/board-update.dto';
-import { hashPassword } from '../../hashHelper/chekHash';
 
 @Injectable()
 export class BoardService {

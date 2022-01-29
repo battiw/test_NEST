@@ -6,12 +6,10 @@ import {
   Body,
   Delete,
   Put,
-  ParseUUIDPipe,
 } from '@nestjs/common';
 import { CreateBoardDto } from './dto/board-create.dto';
 import { UpdateBoardDto } from './dto/board-update.dto';
 import { BoardService } from './board.service';
-import * as uuid from 'uuid';
 import { Board } from './board.entity';
 
 @Controller('boards')

@@ -1,9 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersController } from './resources/users/users.controller';
 import { UsersModule } from './resources/users/users.module';
-import { UsersService } from './resources/users/users.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { User } from './resources/users/user.entity';
@@ -17,6 +15,7 @@ import { TasksModule } from './resources/tasks/tasks.module';
     UsersModule,
     BoardModule,
     TasksModule,
+
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',

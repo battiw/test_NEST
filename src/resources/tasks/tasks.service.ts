@@ -1,12 +1,9 @@
-import { Injectable, ParseUUIDPipe } from '@nestjs/common';
-import { randomUUID } from 'crypto';
+import { Injectable } from '@nestjs/common';
 import { CreateTasksDto } from './dto/tasks-create.dto';
-import { v4 as uuid } from 'uuid';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Tasks } from './tasks.entity';
 import { Repository } from 'typeorm';
 import { UpdateTasksDto } from './dto/tasks-update.dto';
-import { hashPassword } from '../../hashHelper/chekHash';
 
 @Injectable()
 export class TasksService {

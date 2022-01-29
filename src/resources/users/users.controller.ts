@@ -6,12 +6,10 @@ import {
   Body,
   Delete,
   Put,
-  ParseUUIDPipe,
 } from '@nestjs/common';
 import { CreateUsersDto } from '../users/dto/usersCreate.dto';
 import { UpdateUsersDto } from '../users/dto/usersUpdate.dto';
 import { UsersService } from './users.service';
-import * as uuid from 'uuid';
 import { User } from './user.entity';
 
 @Controller('users')
